@@ -75,23 +75,24 @@
             <div class="callout panel">
               <p>Six columns</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
           </div>
         </div>
         <div class="row">
           <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
+            <div class="callout panel lsEqual" data-logicspot-equal>
               <p>Four columns</p>
               <img src="http://placehold.it/300x200" alt="">
             </div>
           </div>
           <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
+            <div class="callout panel lsEqual" data-logicspot-equal>
               <p>Four columns</p>
               <img src="http://placehold.it/300x400" alt="">
             </div>
           </div>
           <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
+            <div class="callout panel lsEqual" data-logicspot-equal>
               <p>Four columns</p>
               <img src="http://placehold.it/300x100" alt="">
             </div>
@@ -104,14 +105,12 @@
     <script src="js/jquery.logicspot-equalise.js"></script>
 
     <script>
+
       $(document).ready( function() {
-        $('p').helloWorld({
-            text        : 'Salut, le monde!',
-            color       : '#005dff',
-            fontStyle   : 'italic',     
-            complete    : function() { console.log( 'Done!' ) }
-        });
+        $('.lsEqual').lsEqualise();
       });
+
+
     </script>
 
   </body>
