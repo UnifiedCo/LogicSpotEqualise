@@ -105,9 +105,14 @@
 
     <script>
       $(document).ready( function() {
-          $('p').helloWorld();
+        $('p').helloWorld({
+            text        : 'Salut, le monde!',
+            color       : '#005dff',
+            fontStyle   : 'italic',     
+            complete    : function() { console.log( 'Done!' ) }
+        });
       });
     </script>
-    
+
   </body>
 </html>
