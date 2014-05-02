@@ -1,14 +1,12 @@
 
-
-// Making a self enclosed javascript pattern - ou variables will not interfeer with any other jQuery libraries
 (function($) {
 
-    $.fn.lsEqualise = function(options) {
+    $.fn.lsEqualise = function() {
 
     	var newHeight = 0;
 		var dataEqualizer = $(this);
 
-		// this should start - 'return this.each( function)' I think to do the callbacks, but when I do it returns before executing anything else
+		// go and find the height of each matching element, if its more than the variable, upadte that variable
 		this.each( function() {
 
 			if($(this).height() > newHeight) {
@@ -17,9 +15,12 @@
 
 		});
 
+		// apply new height
 		if(newHeight) {
 			$(dataEqualizer).height(newHeight);
 		}
+
+		return;
 
     }
 
