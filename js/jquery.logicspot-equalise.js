@@ -1,6 +1,13 @@
 (function($) {
 
-    $.fn.lsEqualise = function() {
+    $.fn.lsEqualise = function(options) {
+
+
+      // Establish our default settings
+      var settings = $.extend({
+          complete    : null
+      }, options);
+
 
       var newHeight = 0;
       var dataEqualizer = $(this);
@@ -27,8 +34,13 @@
         if(newHeight) {
           $(dataEqualizer).height(newHeight);
         }
-      }
 
+        // now fire the callback once the height has been applied
+        if ( $.isFunction( settings.complete ) ) {
+          settings.complete.call( this );
+        }
+
+      }
       return;
 
     }
