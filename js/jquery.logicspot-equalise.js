@@ -19,8 +19,11 @@
             newHeight = $(this).height();
           }
         });
+        // apply the height
+        applyHeights();
+      }
 
-        // apply new height
+      function applyHeights() {
         if(newHeight) {
           $(dataEqualizer).height(newHeight);
         }
@@ -34,6 +37,28 @@
 
 
 
+      // work out if window is being scaled up or down
+      // var $window = $(window),
+      //     previousDimensions = {
+      //         width: $window.width(),
+      //         height: $window.height()
+      //     };
+
+      // $window.resize(function(e) {
+      //     var newDimensions = {
+      //         width: $window.width(),
+      //         height: $window.height()
+      //     };
+
+      //     if (newDimensions.width > previousDimensions.width) {
+      //         calcHeights();
+      //     } else {
+      //         calcHeightsDown();
+      //     }
+
+      //     // Store the new dimensions
+      //     previousDimensions = newDimensions;
+      // });
 
 
 
