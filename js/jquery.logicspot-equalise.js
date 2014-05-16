@@ -7,20 +7,24 @@
       var images = $('img', dataEqualizer);
 
       // only fire after images are loaded
-      $(images).load(function() {
-
-          // go and find the height of each matching element, if its more than the variable, upadte that variable
-          dataEqualizer.each( function() {
-            if($(this).height() > newHeight) {
-              newHeight = $(this).height();
-            }
-          });
-
-          // apply new height
-          if(newHeight) {
-            $(dataEqualizer).height(newHeight);
-          }
+      $(images).load(function() {     
+        calcHeights();
       });
+
+      // function that calculates all the heights then applies them
+      function calcHeights() {
+        // go and find the height of each matching element, if its more than the variable, upadte that variable
+        dataEqualizer.each( function() {
+          if($(this).height() > newHeight) {
+            newHeight = $(this).height();
+          }
+        });
+
+        // apply new height
+        if(newHeight) {
+          $(dataEqualizer).height(newHeight);
+        }
+      }
 
       return;
 
