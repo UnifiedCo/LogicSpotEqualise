@@ -1,36 +1,32 @@
-
 (function($) {
 
     $.fn.lsEqualise = function() {
 
-    	var newHeight = 0;
-		var dataEqualizer = $(this);
+      var newHeight = 0;
+      var dataEqualizer = $(this);
+      var images = $('img', dataEqualizer);
 
-		// go and find the height of each matching element, if its more than the variable, upadte that variable
-		this.each( function() {
+      // only fire after images are loaded
+      $(images).load(function() {
 
-			if($(this).height() > newHeight) {
-				newHeight = $(this).height();
-			}
+          // go and find the height of each matching element, if its more than the variable, upadte that variable
+          dataEqualizer.each( function() {
+            if($(this).height() > newHeight) {
+              newHeight = $(this).height();
+            }
+          });
 
-		});
+          // apply new height
+          if(newHeight) {
+            $(dataEqualizer).height(newHeight);
+          }
+      });
 
-		// apply new height
-		if(newHeight) {
-			$(dataEqualizer).height(newHeight);
-		}
-
-		return;
+      return;
 
     }
 
 }(jQuery));
-
-
-
-
-
-
 
 
 
