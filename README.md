@@ -15,7 +15,7 @@ Requires jQuery - tested with verwion 2.1.0
 
 Just call the jQuery below after including jQuery and LogicSpotEqualise
 
-    $('.lsEqual').lsEqualise({
+    $('.lsEqual').lsEqualise();
 
 
 ## License
