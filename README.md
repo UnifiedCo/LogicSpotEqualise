@@ -11,7 +11,7 @@ jQuery plugin to equalise the heights of different content divs
 
 ## Usage
 
-Requires jQuery - tested with verwion 2.1.0
+Requires jQuery - tested with version 2.1.0
 
 Just call the jQuery below after including jQuery and LogicSpotEqualise
 
