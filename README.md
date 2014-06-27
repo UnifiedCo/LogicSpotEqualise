@@ -1,4 +1,4 @@
-LogicSpotEqualise
+LogicSpotEqualise by [LogicSpot](http://www.logicspot.com)
 =================
 
 jQuery plugin to equalise the heights of different content divs
@@ -9,10 +9,15 @@ jQuery plugin to equalise the heights of different content divs
 * Callback when equalising is complete
 * Waits untill images have loaded before equalising heights
 
-## Useage
+## Usage
 
 Requires jQuery - tested with verwion 2.1.0
 
 Just call the jQuery below after including jQuery and LogicSpotEqualise
 
     $('.lsEqual').lsEqualise({
+
+
+## License
+
+Free! - GNU GENERAL PUBLIC LICENSE
