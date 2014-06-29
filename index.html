@@ -39,14 +39,11 @@
     <script src="js/jquery.logicspot-equalise.js"></script>
 
     <script>
-
-      $(document).ready( function() {
-        $('.lsEqual').lsEqualise({
-          complete    : function() { console.log($('#bob').height()); }
-        });
-      });
-
-
+	$(document).ready( function() {
+		$('.lsEqual').lsEqualise({
+			complete: function(){ console.log($('#bob').height()); },
+		});
+	});
     </script>
 
   </body>
